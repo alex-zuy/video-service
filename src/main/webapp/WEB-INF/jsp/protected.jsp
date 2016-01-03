@@ -3,11 +3,14 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-
-    </head>
-    <body>
-        <h2>Hello world</h2>
-        <c:import url="common/nav.jsp"/>
+<head>
+    <title>Protected page</title>
+</head>
+<body>
+    <h5>Protected</h5>
+    <c:import url="common/nav.jsp"/>
+    <p>
+        Protected content
+    </p>
     </body>
 </html>
