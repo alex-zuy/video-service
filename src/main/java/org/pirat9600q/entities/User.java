@@ -3,7 +3,6 @@ package org.pirat9600q.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name="users")
 public class User {
 
     private Long id;
