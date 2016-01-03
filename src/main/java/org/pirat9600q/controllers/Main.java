@@ -18,25 +18,18 @@ public class Main {
     }
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
-    String login(@Valid @ModelAttribute("login") LoginForm form) {
-        return "login";
-    }
+    void login(@Valid @ModelAttribute("login") LoginForm form) {}
 
     @RequestMapping(value = "loggedIn", method = RequestMethod.GET)
-    String loggedIn(Model model) {
+    void loggedIn(Model model) {
         model.addAttribute("status", "authenticated");
-        return "loggedIn";
     }
 
     @RequestMapping(value = "logout", method = RequestMethod.GET)
-    String logoutForm() {
-        return "logout";
-    }
+    void logoutForm() {}
 
     @RequestMapping(value = "protected", method = RequestMethod.GET)
-    String protectedPage() {
-        return "protected";
-    }
+    void protectedPage() {}
 
     public static class LoginForm {
 
