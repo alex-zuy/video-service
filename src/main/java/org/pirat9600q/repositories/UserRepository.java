@@ -1,9 +1,11 @@
 package org.pirat9600q.repositories;
 
 import org.pirat9600q.entities.User;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends Repository<User, Long> {
+@Repository
+public interface UserRepository extends CrudRepository<User, Long> {
 
     User findByUsername(String username);
 
