@@ -53,7 +53,6 @@ public class Main {
             return "register";
         }
         else {
-            System.out.println("User instance is " + user);
             userRepository.save(user);
             return "redirect:/register-success";
         }
