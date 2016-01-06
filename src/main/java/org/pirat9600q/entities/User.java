@@ -1,11 +1,15 @@
 package org.pirat9600q.entities;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @Entity
 public class User {
 
-    private Long id;
+    private Integer id;
 
     private String username;
 
@@ -16,14 +20,17 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq")
     @SequenceGenerator(name = "users_seq", sequenceName = "users_id_seq")
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
+    @NotNull
+    @NotBlank
+    @Size(min=5,max=50)
     public String getUsername() {
         return username;
     }
@@ -32,6 +39,10 @@ public class User {
         this.username = username;
     }
 
+    @NotNull
+    @NotBlank
+    @Email
+    @Size(min=4, max=50)
     public String getEmail() {
         return email;
     }
@@ -40,6 +51,9 @@ public class User {
         this.email = email;
     }
 
+    @NotNull
+    @NotBlank
+    @Size(min=4, max=20)
     public String getPassword() {
         return password;
     }
