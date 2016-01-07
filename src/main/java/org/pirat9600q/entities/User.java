@@ -19,7 +19,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq")
-    @SequenceGenerator(name = "users_seq", sequenceName = "users_id_seq")
+    @SequenceGenerator(name = "users_seq", sequenceName = "users_id_seq", allocationSize = 1)
     public Integer getId() {
         return id;
     }
@@ -53,7 +53,7 @@ public class User {
 
     @NotNull
     @NotBlank
-    @Size(min=4, max=20)
+    //@Size(min=4, max=20) password hash now spans 60 characters. TODO create register form bean
     public String getPassword() {
         return password;
     }
