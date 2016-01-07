@@ -9,12 +9,16 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @Configuration
 public class ViewResolverConfig {
 
+    public static final String VIEW_PREFIX = "/WEB-INF/jsp/views/";
+
+    public static final String VIEW_SUFFIX = ".jsp";
+
     @Bean
     public InternalResourceViewResolver configureInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setViewClass(JstlView.class);
-        resolver.setPrefix("/WEB-INF/jsp/");
-        resolver.setSuffix(".jsp");
+        resolver.setPrefix(VIEW_PREFIX);
+        resolver.setSuffix(VIEW_SUFFIX);
         resolver.setOrder(0);
         return resolver;
     }
@@ -23,8 +27,8 @@ public class ViewResolverConfig {
     public UrlBasedViewResolver configureUrlViewResolver() {
         UrlBasedViewResolver resolver = new UrlBasedViewResolver();
         resolver.setViewClass(JstlView.class);
-        resolver.setPrefix("/WEB-INF/jsp/");
-        resolver.setSuffix(".jsp");
+        resolver.setPrefix(VIEW_PREFIX);
+        resolver.setSuffix(VIEW_SUFFIX);
         resolver.setOrder(2);
         return resolver;
     }

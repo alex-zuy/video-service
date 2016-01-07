@@ -1,14 +1,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login page</title>
-</head>
 <body>
 <h2>Register</h2>
-<c:import url="common/nav.jsp"/>
 <form:form commandName="user" action="/register" method="post">
     <div>
         <label for="username">Username</label>
@@ -30,4 +24,3 @@
     </div>
 </form:form>
 </body>
-</html>
