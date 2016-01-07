@@ -5,7 +5,7 @@
 <h2>Logout</h2>
 <form:form action="/logout" method="post">
     <div>
-        <button type="submit">Logout</button>
+        <button class="btn" type="submit">Logout</button>
     </div>
 </form:form>
 </body>
