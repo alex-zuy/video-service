@@ -53,7 +53,6 @@ public class User {
 
     @NotNull
     @NotBlank
-    //@Size(min=4, max=20) password hash now spans 60 characters. TODO create register form bean
     public String getPassword() {
         return password;
     }

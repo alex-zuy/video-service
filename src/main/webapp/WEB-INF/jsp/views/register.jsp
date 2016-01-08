@@ -19,6 +19,11 @@
         <form:password path="password"/>
         <form:errors path="password"/>
     </div>
+    <div class="input-field">
+        <label for="confirmPassword">Confirm password</label>
+        <form:password path="confirmPassword"/>
+        <form:errors path="confirmPassword"/>
+    </div>
     <div>
         <button class="btn" type="submit">Submit</button>
     </div>
